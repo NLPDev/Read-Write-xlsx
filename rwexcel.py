@@ -23,7 +23,8 @@ for i in range(nr-1):
 	wb = Workbook()
 	sh = wb.active
 	sh.title = 'Sheet1'
-	sh.merge_cells("A1:C1")
+	sh.merge_cells(start_row=1, start_column=1, end_row=1, end_column=nc-1)
+	#sh.merge_cells('A1:C1')
 	c2 = sh.cell(row=1, column=1)
 	c2.value = "Table1"
 	c2.alignment = Alignment(horizontal='center', vertical='center')
